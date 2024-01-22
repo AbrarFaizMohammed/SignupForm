@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const path = require('path');
 const bodyparser = require('body-parser');
@@ -7,7 +8,6 @@ const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
-
 
 app.get("/", (req, res) => {
     res.send('Let\'s build sign up page');
@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
 
     const Option = {
         method:'POST',
-        auth:'abrar:774408c8e4e6b541d199e804dca9d0c8-us11'
+        auth: process.env.AUTH_KEY
     }
 
   const request= https.request(url,Option,(response)=>{
@@ -66,7 +66,3 @@ app.post('/failure',(req,res)=>{
 app.listen(process.env.PORT ||3000, () => {
     console.log("Serving through port 3000.")
 })
-
-
-//appid:774408c8e4e6b541d199e804dca9d0c8-us11
-//audiance Id:f331d05aff
