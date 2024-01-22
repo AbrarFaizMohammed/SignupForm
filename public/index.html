@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="signUpForm" action="/" method="post">
+        <h1>Love to hear from you,<br>Get in touch 👋🏼</h1>
+        <div class="formElements">
+            <div class="fe1">
+                <label class="labelName" for="name">Your name</label><br>
+                <input class="textbox" id="name" type="text" name="Name" required>
+            </div>
+            <div class="fe2">
+                <label class="labelName" for="email">Your email</label><br>
+                <input class="textbox" id="email" type="text" name="email" required>
+            </div>
+            <div class="fe3">
+                <label class="labelName" for="comments">Message</label><br>
+                <textarea name="message" id="comments" cols="70" rows="10"></textarea>
+            </div>
+        </div>
+        <button class="submitbtn" type="submit">Submit <span class="arrow">⇝</span></button>
+    </form>
+</body>
+</html>
